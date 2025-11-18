@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Domain.Enums
 {
-    internal class CategoryEntity: BaseEntity
+    public enum DeviceType
     {
+        Windows,
+        SmartDevice
     }
+
 }
