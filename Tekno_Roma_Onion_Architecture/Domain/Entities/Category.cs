@@ -10,10 +10,11 @@ namespace Domain.Entities
     public class Category : BaseEntity
     {
         public string Name { get; set; }
+       
+        public ICollection<Product> Products { get; set; }
         /// <summary>
         /// Category entity Product ile bire çok ilişki içerisindedir. One to many.
         /// </summary>
-        public ICollection<Product> Products { get; set; }
     }
 
 }

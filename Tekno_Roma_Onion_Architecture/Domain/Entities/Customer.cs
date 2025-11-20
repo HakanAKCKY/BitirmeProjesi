@@ -11,24 +11,25 @@ namespace Domain.Entities
 {
     public class Customer : BaseEntity
     {
+
+        public string FullName { get; set; }
         /// <summary>
         /// müşteri tam adı
         /// </summary>
-        public string FullName { get; set; }
         public string TCKN { get; set; }
+
+        public Gender Gender { get; set; }
         /// <summary>
         /// gender cinsiyet enum olarak tanımlandı.
         /// Haluk beyin istemiş olduğu satış takip raporunun, müşteri kitlesi ve yaşı bilgisi için eklendi.
         /// </summary>
-        public Gender Gender { get; set; }
+        public int Age { get; set; }
         /// <summary>
         /// Haluk beyin istemiş olduğu satış takip raporunun, müşteri kitlesi ve yaşı bilgisi için eklendi.
         /// </summary>
-        public int Age { get; set; }
-        /// <summary>
-        /// Customer entity sales ile bire çok ilişki içerisindedir. One to many 
-        /// </summary>
         public ICollection<Sale> Sales { get; set; }
-    }
+    }  /// <summary>
+       /// Customer sales ile bire çok ilişki içerisindedir. One to many 
+       /// </summary>
 
 }
