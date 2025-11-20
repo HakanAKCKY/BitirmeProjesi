@@ -25,7 +25,7 @@ namespace Domain.Entities
         public int CriticalLevel { get; set; }
         /// <summary>
         ///     ürünün minumum kritik stok seviyesi belirlenen seviyenin altına düştüğünde uyarı vermek için eklendi.Raporda kullanılacak.
-        /// </summary>
+        /// </summary> 
 
         public int CategoryId { get; set; }
         /// <summary>

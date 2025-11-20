@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 namespace Domain.Entities
 {
     public class Sale : BaseEntity
+    /// <summary> 
+    ///     Satış işlemlerini temsil eden entity sınıfı
+    /// </summary>
     {
         public string SaleNumber { get; set; }
         public decimal TotalAmount { get; set; }
