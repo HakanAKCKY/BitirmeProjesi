@@ -28,10 +28,12 @@ namespace Domain.Entities
         public int StoreId { get; set; }
         /// <summary>
         /// Çalışanın hangi mağazada çalıştığını belirtir, projede Tekroma çoklu mağaza yapısı olduğu için eklendi.
+        /// yani birçok çalışan bir mağazada çalışabilir.
         /// </summary>
         public Store Store { get; set; }
         /// <summary>
         /// çalışanın bağlı olduğu mağaza
+        /// yani birçok çalışan bir mağazada çalışabilir.
         /// </summary>
         public ICollection<Sale> Sales { get; set; }
         /// <summary>
