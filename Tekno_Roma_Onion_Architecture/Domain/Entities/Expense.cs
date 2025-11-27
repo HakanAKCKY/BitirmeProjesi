@@ -21,10 +21,17 @@ namespace Domain.Entities
         /// <summary>
         ///     Harcama tutarı verisi.
         /// </summary>
+        public int? EmployeeId { get; set; }
+        /// <summary>
+        /// Hangi çalışana ödeme? (Foreign Key)
+        /// Sadece ExpenseType = CalisanOdemesi ise dolu
+        /// Maaş ödemelerinde ilgili çalışan
+        /// Null olabilir (diğer gider türlerinde)
+        /// </summary>
         public DateTime ExpenseDate { get; set; }
         /// <summary>
         ///     Harcama tarihi verisi.
         /// </summary>
     }
-
+    //todo: Dolar ve Euro kurları eklenecek.
 }

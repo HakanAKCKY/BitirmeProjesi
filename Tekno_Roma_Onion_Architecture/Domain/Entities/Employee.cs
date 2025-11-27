@@ -35,6 +35,12 @@ namespace Domain.Entities
         /// çalışanın bağlı olduğu mağaza
         /// yani birçok çalışan bir mağazada çalışabilir.
         /// </summary>
+
+        public DateTime HireDate { get; set; }
+        /// <summary>
+        /// İşe başlama tarihi
+        /// NEDEN? Kıdem hesabı, izin hakları için
+        /// </summary>
         public ICollection<Sale> Sales { get; set; }
         /// <summary>
         /// Çalışanın yaptığı satışları temsil eder. bir çalışanın birden çok satışı olabilir buda one to many ilişkiyi gösterir.

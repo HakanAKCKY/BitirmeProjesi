@@ -20,12 +20,21 @@ namespace Domain.Entities
 
         public Gender Gender { get; set; }
         /// <summary>
-        /// gender cinsiyet enum olarak tanımlandı.
+        /// Gender cinsiyet enum olarak tanımlandı.
         /// Haluk beyin istemiş olduğu satış takip raporunun, müşteri kitlesi ve yaşı bilgisi için eklendi.
         /// </summary>
-        public int Age { get; set; }
+        public DateTime? BirthDate { get; set; }
         /// <summary>
-        /// Haluk beyin istemiş olduğu satış takip raporunun, müşteri kitlesi ve yaşı bilgisi için eklendi.
+        /// Doğum Tarihi
+        /// NEDEN? Yaş analizi için (Haluk Bey'in raporu)
+        /// </summary>
+
+        public int? Age => BirthDate.HasValue
+            ? DateTime.Now.Year - BirthDate.Value.Year
+            : null;
+        /// <summary>
+        /// Müşterinin yaşı
+        /// BirthDate'den hesaplanır
         /// </summary>
         public ICollection<Sale> Sales { get; set; }
     }  /// <summary>
